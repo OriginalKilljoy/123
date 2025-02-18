@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123b</title>
+</head>
+<body>
+    <div id="divToChangeColor">
+        <input onchange="changeBackgroundColor(this.value)" type="range" id="backgroundColor" name="backgroundColor" min="0" max="100">
+        <label for="backgroundColor">Bakgrunnsfarge</label>
+    </div>
+
+    <script>
+        let backgroundColorValue = 'pink';
+        function changeBackgroundColor(value){
+        
+            if(value < 30){
+                backgroundColorValue = 'red';
+            }
+            else if(value > 70){
+                backgroundColorValue = 'green';
+            }
+            else{
+                backgroundColorValue = 'yellow';
+            }
+            document.getElementById('divToChangeColor').style.backgroundColor = backgroundColorValue;
+        }
+    </script>
+</body>
+</html>
